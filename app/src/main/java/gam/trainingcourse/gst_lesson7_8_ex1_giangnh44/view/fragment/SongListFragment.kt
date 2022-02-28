@@ -12,7 +12,6 @@ import gam.trainingcourse.gst_lesson7_8_ex1_giangnh44.view.adapter.SongAdapter
 import gam.trainingcourse.gst_lesson7_8_ex1_giangnh44.databinding.FragmentSongListBinding
 import gam.trainingcourse.gst_lesson7_8_ex1_giangnh44.base.BaseFragment
 import gam.trainingcourse.gst_lesson7_8_ex1_giangnh44.service.PlayingService
-import gam.trainingcourse.gst_lesson7_8_ex1_giangnh44.utils.MediaPlayerUtils
 import gam.trainingcourse.gst_lesson7_8_ex1_giangnh44.utils.MusicManager
 import gam.trainingcourse.gst_lesson7_8_ex1_giangnh44.viewmodel.MusicViewModel
 
@@ -28,7 +27,6 @@ class SongListFragment : BaseFragment<FragmentSongListBinding>(), ISongAdapter {
 
     private var adapter: SongAdapter? = null
 
-    private var isPlayingSong = false
 
     override fun createBinding(
         inflater: LayoutInflater,
