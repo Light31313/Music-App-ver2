@@ -10,11 +10,11 @@
     <application
         android:allowBackup="true"
         android:name=".MyApplication"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo_app"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GST_Lesson7_8_Ex1_GiangNH44">
+        android:theme="@style/Theme.GST_Lesson7_8_Ex1_GiangNH44.NoActionBar">
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <service android:name=".service.PlayingService"/>
-        <receiver android:name=".receiver.PlayingReceiver"/>
+        <receiver android:name=".broadcastreceiver.PlayingReceiver"/>
     </application>
 
 </manifest>

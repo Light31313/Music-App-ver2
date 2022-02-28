@@ -18,6 +18,21 @@
         <entry key="..\:/Android Studio/GST_Lesson7_8_Ex1_GiangNH44/app/src/main/res/layout/fragment_song_list.xml" value="0.25" />
         <entry key="..\:/Android Studio/GST_Lesson7_8_Ex1_GiangNH44/app/src/main/res/layout/item_song.xml" value="0.25" />
         <entry key="..\:/Android Studio/GST_Lesson9_Ex1_GiangNH44/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Android Studio/Music-App-ver2/app/src/main/res/drawable/background_chosen_button.xml" value="0.2155" />
+        <entry key="..\:/Android Studio/Music-App-ver2/app/src/main/res/drawable/ic_baseline_eco_24.xml" value="0.2155" />
+        <entry key="..\:/Android Studio/Music-App-ver2/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_24.xml" value="0.203" />
+        <entry key="..\:/Android Studio/Music-App-ver2/app/src/main/res/drawable/ic_baseline_music_note_24.xml" value="0.2155" />
+        <entry key="..\:/Android Studio/Music-App-ver2/app/src/main/res/drawable/ic_baseline_pause_24.xml" value="0.1" />
+        <entry key="..\:/Android Studio/Music-App-ver2/app/src/main/res/drawable/ic_baseline_play_arrow_24.xml" value="0.1" />
+        <entry key="..\:/Android Studio/Music-App-ver2/app/src/main/res/drawable/ic_baseline_skip_next_24.xml" value="0.203" />
+        <entry key="..\:/Android Studio/Music-App-ver2/app/src/main/res/drawable/ic_baseline_skip_previous_24.xml" value="0.203" />
+        <entry key="..\:/Android Studio/Music-App-ver2/app/src/main/res/drawable/play_music_background.xml" value="0.203" />
+        <entry key="..\:/Android Studio/Music-App-ver2/app/src/main/res/layout/activity_main.xml" value="0.26875" />
+        <entry key="..\:/Android Studio/Music-App-ver2/app/src/main/res/layout/fragment_play_song_collapse.xml" value="0.22" />
+        <entry key="..\:/Android Studio/Music-App-ver2/app/src/main/res/layout/fragment_play_song_expand.xml" value="0.26875" />
+        <entry key="..\:/Android Studio/Music-App-ver2/app/src/main/res/layout/fragment_playing.xml" value="0.12239583333333333" />
+        <entry key="..\:/Android Studio/Music-App-ver2/app/src/main/res/layout/fragment_song_list.xml" value="0.2103448275862069" />
+        <entry key="..\:/Android Studio/Music-App-ver2/app/src/main/res/layout/item_song.xml" value="0.26875" />
       </map>
     </option>
   </component>

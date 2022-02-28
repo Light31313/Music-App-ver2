@@ -1,15 +1,18 @@
-package gam.trainingcourse.gst_lesson7_8_ex1_giangnh44.utils
+package gam.trainingcourse.gst_lesson7_8_ex1_giangnh44.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object API {
+    private const val BASE_URL = "https://61f50c3362f1e300173c3fd2.mockapi.io/"
+    const val PATH = "songInfo"
+
     private var retrofit: Retrofit? = null
     val apiService: APIService
         get() {
             if (retrofit == null) {
                 retrofit = Retrofit.Builder()
-                    .baseUrl("https://614890bd035b3600175b9f07.mockapi.io/")
+                    .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
             }

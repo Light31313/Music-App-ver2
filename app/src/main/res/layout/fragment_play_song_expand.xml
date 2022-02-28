@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="currentTime"
+            type="int" />
+        <variable
+            name="totalTime"
+            type="int" />
+        <variable
+            name="song"
+            type="gam.trainingcourse.gst_lesson7_8_ex1_giangnh44.model.Song" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cl_play_music"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/play_music_background"
+        android:clickable="true"
+        android:focusable="true"
+        sourceImageUrl="@{song.songImage}">
+
+        <ImageButton
+            android:id="@+id/btn_collapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_song_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{song.songName}"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/txt_singer_name"
+            app:layout_constraintStart_toEndOf="@id/btn_collapse"
+            app:layout_constraintTop_toTopOf="@id/btn_collapse" />
+
+        <TextView
+            android:id="@+id/txt_singer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{song.singerName}"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/btn_collapse"
+            app:layout_constraintStart_toEndOf="@id/btn_collapse"
+            app:layout_constraintTop_toBottomOf="@id/txt_song_name" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_play_song"
+            imageUrl="@{song.songImage}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_eco_24"
+            app:layout_constraintBottom_toTopOf="@id/gl_hoz_1"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_collapse"
+            app:layout_constraintWidth_percent="0.85"
+            app:shapeAppearanceOverlay="@style/circleImageView" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_hoz_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <TextView
+            android:id="@+id/txt_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/default_time"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/sb_song_progress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gl_hoz_1"
+            milliseconds="@{currentTime}"/>
+
+        <TextView
+            android:id="@+id/txt_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/default_time"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/sb_song_progress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gl_hoz_1"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintVertical_chainStyle="packed"
+            milliseconds="@{totalTime}"/>
+
+        <SeekBar
+            android:id="@+id/sb_song_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:progressTint="@color/progress_color"
+            android:secondaryProgressTint="@color/secondary_progress_color"
+            app:layout_constraintBottom_toTopOf="@id/btn_play"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_total_time" />
+
+        <ImageButton
+            android:id="@+id/btn_shuffle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_shuffle_24"
+            app:layout_constraintBottom_toBottomOf="@id/btn_play"
+            app:layout_constraintEnd_toStartOf="@id/btn_prev"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_play" />
+
+        <ImageButton
+            android:id="@+id/btn_prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_skip_previous_24"
+            app:layout_constraintBottom_toBottomOf="@id/btn_play"
+            app:layout_constraintEnd_toStartOf="@id/btn_play"
+            app:layout_constraintStart_toEndOf="@id/btn_shuffle"
+            app:layout_constraintTop_toTopOf="@id/btn_play" />
+
+        <ImageButton
+            android:id="@+id/btn_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_pause_circle_outline_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_next"
+            app:layout_constraintStart_toEndOf="@id/btn_prev"
+            app:layout_constraintTop_toBottomOf="@id/sb_song_progress" />
+
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_skip_next_24"
+            app:layout_constraintBottom_toBottomOf="@id/btn_play"
+            app:layout_constraintEnd_toStartOf="@id/btn_loop"
+            app:layout_constraintStart_toEndOf="@id/btn_play"
+            app:layout_constraintTop_toTopOf="@id/btn_play" />
+
+        <ImageButton
+            android:id="@+id/btn_loop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_loop_24"
+            app:layout_constraintBottom_toBottomOf="@id/btn_play"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_next"
+            app:layout_constraintTop_toTopOf="@id/btn_play" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">GST_Lesson7_8_Ex1_GiangNH44</string>
-    <string name="list_song">List song</string>
+    <string name="app_name">MP3 Pro Vip Luxury</string>
+    <string name="list_song">List song of NHG</string>
     <string name="title">Title</string>
     <string name="singer">singer</string>
+    <string name="default_time">00:00</string>
 </resources>
